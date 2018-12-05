@@ -1,0 +1,2 @@
+# Field Injection is bad (IoC/DI)
+Field injection is bad because it allows someone to construct an object without providing the necessary requirements. Further classes can't be instantiated in tests without reflection and their dependencies are hidden from the "outside". Using constructor injection is better as this makes the requirements explicit and forces users of the API to provide these. In case of optional or changing dependencies use setter injection.
